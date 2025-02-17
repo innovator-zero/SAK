@@ -73,7 +73,7 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University <sup>2</sup>University of Illinois
-                Urbana-Champaign<br>ICLR 2025</span>
+                Urbana-Champaign<br><b>ICLR 2025</b></span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
             </div>
 
@@ -136,9 +136,13 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h2 class="subtitle has-text-centered">
-          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
-          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+          <b>We propose SAK, a "Swiss Army Knife" approach to preserve and exploit the representation biases during
+            distillation from multiple Vision Foundation Models.</b>
         </h2>
+        <div class="image-container" style="display: flex; justify-content: center;">
+          <img src="./static/images/teaser.png" alt="Teaser image"
+            style="width: 100%; height: auto; object-fit: contain;">
+        </div>
       </div>
     </div>
   </section>
@@ -176,9 +180,45 @@
   <section class="section biases">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Representation Biases</h2>
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/quan1.png" alt="Quantitative analysis"
+              style="width: 60%; display: block; margin: 0 auto;" />
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qual1.png" alt="Qualitative analysis"
+              style="width: 70%; display: block; margin: 0 auto;" />
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qual2.png" alt="Qualitative analysis"
+              style="width: 100%; display: block; margin: 0 auto;" />
+          </div>
+        </div>
+      </div>
       <div class="content has-text-justified">
         <p>
-
+          VFMs are pretrained on diverse datasets, image resolutions, and objectives, introducing <b>representation
+            biases</b> when applied as feature extractors for downstream tasks. Our quantitative and qualitative results
+          reveal that these inherent biases yield both advantages and disadvantages across different tasks, with <b>no
+            single model achieving consistently superior performance across all domains</b>.
+          These findings highlight the challenge of accomplishing comprehensive improvements in MTL using VFMs, pointing
+          to the demand for collaborative utilization of multiple VFMs to exploit their complementary strengths.
+        </p>
+      </div>
+      <div class="image-container" style="display: flex; justify-content: center;">
+        <img src="./static/images/tab2.png" alt="Pilot study of many-to-one distillation"
+          style="width: 100%; height: auto; object-fit: contain;">
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Recent works distill multiple VFM teachers into a single student model, this many-to-one distillation risks
+          eliminating the representation biases of the VFM teachers, potentially limiting the model's ability to
+          capitalize on their individual strengths for specific tasks. Our pilot study shows that the student trained by
+          many-to-one distillation does not consistently surpass the teachers in their respective proficient tasks.
         </p>
       </div>
     </div>
@@ -187,9 +227,20 @@
   <section class="section method">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Methodology</h2>
+      <div class="image-container" style="display: flex; justify-content: center;">
+        <img src="./static/images/arch.png" alt="SAK Framework" style="width: 100%; height: auto; object-fit: contain;">
+      </div>
       <div class="content has-text-justified">
         <p>
-
+          SAK's framework incorporates a shared <b>Teacher-Agnostic Stem</b> alongside multiple <b>Teacher-Specific
+            Adapter Path</b>
+          modules, which produce specialized representations aligned with each corresponding VFM teacher. The
+          Teacher-Agnostic Stem captures universal knowledge, while the Teacher-Specific Adapter Paths accommodate the
+          heterogeneous representation biases of each teacher, explicitly learning their diverse model characteristics.
+          To amalgamate the committee's expertise, we treat each group of representations as a knowledgeable expert and
+          design a <b>Mixture-of-Representations Router</b>. This router dynamically weighs and combines the most
+          relevant
+          representations, bridging the gap between general-purpose knowledge and task-specific characteristics.
         </p>
       </div>
     </div>
@@ -200,7 +251,9 @@
       <h2 class="title is-3">Experiments</h2>
       <div class="content has-text-justified">
         <p>
-
+          We evaluate SAK on two widely-used multi-task benchmarks, PASCAL-Context and NYUD-v2, showing it remarkably
+          outperforms previous multi-teacher VFM distillation methods and state-of-the-art multi-task models in both
+          performance and robustness.
         </p>
       </div>
     </div>
@@ -214,7 +267,7 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <!-- Your image here -->
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+            <img src="static/images/radar.png" alt="MY ALT TEXT" style="width: 50%; display: block; margin: 0 auto;" />
             <h2 class="subtitle has-text-centered">
               First image description.
             </h2>
@@ -228,7 +281,7 @@
           </div>
           <div class="item">
             <!-- Your image here -->
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+            <img src="static/images/few.png" alt="MY ALT TEXT" style="width: 50%; display: block; margin: 0 auto;" />
             <h2 class="subtitle has-text-centered">
               Third image description.
             </h2>
