@@ -57,7 +57,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Swiss Army Knife: <u>S</u>ynergizing Bi<u>A</u>s in
+            <h1 class="title is-1 is-size-3-mobile publication-title">Swiss Army Knife: <u>S</u>ynergizing
+              Bi<u>A</u>s in
               <u>K</u>nowledge from Vision Foundation Models for Multi-Task Learning
             </h1>
             <div class="is-size-5 publication-authors">
@@ -140,9 +141,15 @@
             distillation from multiple Vision Foundation Models, maximizing their strengths for multiple downstream
             tasks.</b>
         </h2>
-        <div class="image-container" style="display: flex; justify-content: center;">
-          <img src="./static/images/teaser.png" alt="Teaser image"
-            style="width: 100%; height: auto; object-fit: contain;">
+        <div class="columns is-multiline is-centered">
+          <div class="column is-full-mobile is-5-tablet is-5-desktop has-text-centered">
+            <img src="./static/images/quan1.png" alt="Teaser image"
+              style="width: 100%; height: auto; object-fit: contain;">
+          </div>
+          <div class="column is-full-mobile is-6-tablet is-6-desktop has-text-centered">
+            <img src="./static/images/qual1.png" alt="Teaser image"
+              style="width: 100%; height: auto; object-fit: contain;">
+          </div>
         </div>
       </div>
     </div>
@@ -186,15 +193,25 @@
           <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
             <img src="static/images/quan1.png" alt="Quantitative analysis" style="height: 100%; object-fit: contain;" />
           </div>
+          <div class="subtitle has-text-centered is-size-6">
+            Quantitative analysis on the PASCAL-Context dataset across five vision tasks,
+            compared to an ImageNet-pretrained ViT.
+          </div>
         </div>
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
             <img src="static/images/qual1.png" alt="Qualitative analysis" style="height: 100%; object-fit: contain;" />
           </div>
+          <div class="subtitle has-text-centered is-size-6">
+            Qualitative comparison through examples from semantic segmentation and boundary detection tasks.
+          </div>
         </div>
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
             <img src="static/images/qual2.png" alt="Qualitative analysis" style="height: 100%; object-fit: contain;" />
+          </div>
+          <div class="subtitle has-text-centered is-size-6">
+            Qualitative comparison based on a pair of manipulated images.
           </div>
         </div>
       </div>
@@ -230,7 +247,7 @@
   <section class="section method">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Methodology</h2>
-      <div class="image-container" style="display: flex; justify-content: center;">
+      <div class="image-container" style="display: flex; justify-content: center; margin-top: 40px;">
         <img src="./static/images/arch.png" alt="SAK Framework" style="width: 100%; height: auto; object-fit: contain;">
       </div>
       <div class="content has-text-justified">
@@ -259,7 +276,7 @@
             <img src="static/images/radar.png" alt="Performance comparison"
               style="height: 100%; object-fit: contain;" />
           </div>
-          <h2 class="subtitle has-text-centered">
+          <h2 class="subtitle has-text-centered is-size-6">
             Performance comparison on two datasets based on ViT-B backbones.
           </h2>
         </div>
@@ -277,7 +294,7 @@
           <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
             <img src="static/images/few.png" alt="Performance comparison" style="height: 100%; object-fit: contain;" />
           </div>
-          <h2 class="subtitle has-text-centered">
+          <h2 class="subtitle has-text-centered is-size-6">
             Performance w.r.t. downstream data percentage.
           </h2>
         </div>
@@ -297,12 +314,11 @@
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Visualization</h2>
-
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <div style="position: relative; font-size: medium; margin-left: 20px; margin-right: 20px;">
-            <div style="position: absolute; top: -30px; left: 30px; width: calc(100% - 30px);
-              display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; text-align: center;">
+            <div style=" position: absolute; top: -30px; left: 30px; width: calc(100% - 30px); display: grid;
+            grid-template-columns: repeat(6, 1fr); gap: 10px; text-align: center;">
               <div>Image</div>
               <div>Semseg</div>
               <div>Parsing</div>
@@ -311,7 +327,7 @@
               <div>Boundary</div>
             </div>
 
-            <div style="position: relative; margin-top: 100px;">
+            <div style="position: relative; margin-top: 85px;">
               <div
                 style="position: absolute; left: 0; top: 50%; transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl;">
                 GT
@@ -422,7 +438,7 @@
             </div>
 
             <!-- First row with GT label -->
-            <div style="position: relative; margin-top: 40px;">
+            <div style="position: relative; margin-top: 20px;">
               <div
                 style="position: absolute; left: 0; top: 50%; transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl;">
                 GT
@@ -520,7 +536,7 @@
               <div>Boundary</div>
             </div>
 
-            <div style="position: relative; margin-top: 80px;">
+            <div style="position: relative; margin-top: 55px;">
               <div
                 style="position: absolute; left: 0; top: 50%; transform: translateY(-50%) rotate(180deg); writing-mode: vertical-rl;">
                 GT
@@ -649,8 +665,7 @@
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                 target="_blank">Academic Project Page Template</a> which was adopted from the <a
                 href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the
-              footer. <br> This website is licensed under a <a rel="license"
+              <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
