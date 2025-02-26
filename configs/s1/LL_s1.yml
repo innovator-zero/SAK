@@ -1,0 +1,34 @@
+results_dir: ./results/
+
+# Dataset
+dataset: imagenet
+tr_batch: 16
+val_batch: 16
+nworkers: 16
+
+# Model
+teachers:
+  dinov2:
+    backbone_type: dinov2_large
+  clip:
+    backbone_type: timmclip_large
+  sam:
+    backbone_type: sam_large
+student:
+  backbone:
+    backbone_type: sak
+    vit_name: vit_large
+    down_ratio: 4
+    aligner: False
+    freeze_vit: False
+
+loss_type: cos+l1
+
+# Optimizer and Scheduler
+max_epochs: 30 # set to 0 when using iters
+optimizer: adamw
+lr: 1e-3
+weight_decay: 0.01
+scheduler: cosine
+warmup_epochs: 2
+grad_clip: 0

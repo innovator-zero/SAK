@@ -1,0 +1,42 @@
+results_dir: ./results/
+
+# Dataset
+dataset: nyud
+tr_batch: 2
+val_batch: 8
+nworkers: 8
+task_dict:
+  semseg: 1
+  normals: 1
+  edge: 1
+  depth: 1
+
+# Model
+teachers:
+  dinov2:
+    backbone_type: dinov2_base
+  clip:
+    backbone_type: timmclip_base
+  sam:
+    backbone_type: sam_base
+student:
+  backbone:
+    backbone_type: sak
+    vit_name: vit_base
+    down_ratio: 4
+    aligner: False
+    router_type: mor
+    noisy_gating: True
+    freeze_vit: False
+
+loss_type: cos+l1
+
+# Optimizer and Scheduler
+max_epochs: 0 # set to 0 when using iters
+max_iters: 40000
+eval_freq: 10
+optimizer: adamw
+lr: 2e-5
+weight_decay: 1e-6
+scheduler: poly
+grad_clip: 10

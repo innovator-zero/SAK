@@ -1,0 +1,8 @@
+numpy==1.26.4
+torch==2.5.0
+torchvision==0.20.0
+wandb
+matplotlib
+timm
+opencv_python
+scikit-image

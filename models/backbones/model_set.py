@@ -1,0 +1,48 @@
+timm_names = {
+    "vit_small": "vit_small_patch16_384",
+    "vit_base": "vit_base_patch16_384",
+    "vit_large": "vit_large_patch16_384",
+    "vit_huge": "vit_huge_patch14_224",
+    "dinov2_small": "vit_small_patch14_dinov2",
+    "dinov2_base": "vit_base_patch14_dinov2",
+    "dinov2_large": "vit_large_patch14_dinov2",
+    "dinov2_giant": "vit_giant_patch14_dinov2",
+    "sam_base": "samvit_base_patch16",
+    "sam_large": "samvit_large_patch16",
+    "sam_huge": "samvit_huge_patch16",
+    "openaiclip_base": "vit_base_patch16_clip_224.openai",
+    "openaiclip_large": "vit_large_patch14_clip_336.openai",
+    "openclip_base": "vit_base_patch16_clip_384",
+    "openclip_large": "vit_large_patch14_clip_336",
+    "timmclip_base": "vit_base_patch16_clip_384",
+    "timmclip_large": "vit_large_patch14_clip_336",
+    "dfnclip_base": "vit_base_patch16_clip_384",
+    "dfnclip_large": "vit_large_patch14_clip_336",
+    "dfnclip_huge": "vit_huge_patch14_clip_336",
+    "swin_tiny": "swin_tiny_patch4_window7_224",
+    "swin_small": "swin_small_patch4_window7_224",
+    "swin_base": "swin_base_patch4_window7_224",
+    "swin_large": "swin_large_patch4_window7_224",
+}
+
+hf_names = {
+    "siglip_base": "google/siglip-base-patch16-512",
+    "siglip_large": "google/siglip-large-patch16-384",
+    "siglip_so": "google/siglip-so400m-patch14-384",
+    "openclip_base": "laion/CLIP-ViT-B-16-laion2B-s34B-b88K",
+    "openclip_large": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+    "dfnclip_base": "apple/DFN2B-CLIP-ViT-B-16",
+    "dfnclip_large": "apple/DFN2B-CLIP-ViT-L-14",
+    "dfnclip_huge": "apple/DFN5B-CLIP-ViT-H-14-378",
+    "theia_base": "theaiinstitute/theia-base-patch16-224-cdiv",
+    "theia_small": "theaiinstitute/theia-small-patch16-224-cdiv",
+}
+
+out_indices_cfg = {
+    "small": [2, 5, 8, 11],
+    "base": [2, 5, 8, 11],
+    "large": [5, 11, 17, 23],
+    "huge": [7, 15, 23, 31],
+    "giant": [9, 19, 29, 39],
+    "so": [6, 13, 20, 26],
+}
