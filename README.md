@@ -23,6 +23,7 @@ Different foundation models excel at different tasks &mdash; what if we could co
 ![Overview](assets/arch.png)
 
 ## 🔥 News
+- [2025.03.03] Pre-trained checkpoints released on Hugging Face 🤗. 
 - [2025.02.26] Code released.
 
 ## ✨ Abstract
@@ -46,7 +47,7 @@ In stage 2, we use the PASCAL-Context and NYUD-v2 datasets for learning multiple
 You should place three datasets in the same directory, and specify the path to the directory as `db_root` variable in `datasets/utils/mypath.py`.
 
 ### Pre-trained Models
-We will provide the pre-trained SAK models soon.
+We provide the pre-trained SAK models (Stage 1 & Stage 2) in our [Hugging Face model hub](https://huggingface.co/yxlu0/SAK).
 
 ## 🚀 Usage
 
